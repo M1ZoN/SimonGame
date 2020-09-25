@@ -13,7 +13,7 @@
 *Get ready to watch, remember, repeat! It's fast-paced play, with lights and sounds that challenge you with every sequence. Experience the fun as you repeat the patterns and advance to higher levels. Keep track of your score as you challenge friends or try to beat your own high score!*
 
 ## To Start simply click any button
-('images/start.png)
+![]('/images/start.png')
 
 ## Here is a demo of a game
-('images/gameplay.gif')
+![]('/images/gameplay.gif')
