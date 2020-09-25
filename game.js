@@ -60,11 +60,24 @@ const handleClick = (event) => {
 
 $(".btn").on("click", handleClick);
 
-$(document).on("keydown", () => {
+const startGame = () => {
   if (start === false) {
+    $("#start-button").addClass("hide-start");
     start = true;
     nextSequence();
   }
+};
+
+$(document).on("keydown", startGame);
+$("#start-button").on("click", () => {
+  $("#start-button").addClass("pressed");
+  setTimeout(() => {
+    $("#start-button").removeClass("pressed");
+  }, 100);
+  setTimeout(() => {
+    $("#start-button").addClass("hide-start");
+    startGame();
+  }, 200);
 });
 
 const startOver = () => {
@@ -94,6 +107,7 @@ const checkAnswer = (currentLevel) => {
     setTimeout(() => {
       $("body").addClass("game-over");
       $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#start-button").removeClass("hide-start");
       startOver();
       wrongAudio.play();
       setTimeout(() => {
